@@ -2,7 +2,7 @@
 
 const countDown = document.getElementById('countdown')
 
-console.log(countDown)
+//console.log(countDown)
 
 let count = 10
 
@@ -23,9 +23,14 @@ const timer = setInterval(() => {
 
         countDown.innerHTML = 'Tempo scaduto!'
 
+
+        //DISPLAY NONE DOPO 10000ms
+
+        numberList.classList.add("d-none")
     }
 
 }, 1000);
+
 
 
 //FUNCTION: RANDOM NUMBERS BY 1 AT 50/////////////////////////////////
@@ -40,12 +45,10 @@ function randomNum50() {
 
 //RANDOM NUMBERS CYCLE///////////////////////////////////////////////
 
-//CONST
 
+//LIST NUMBER
 
-
-
-
+const numberList = document.getElementById("numbers-list")
 
 //console.log(liElement)
 
@@ -53,10 +56,8 @@ function randomNum50() {
 
 for (let i = 0; i < 5; i++) {
 
-    
 
-
-    const numberList = document.getElementById("numbers-list")
+    //CONST
 
     const liElement = document.createElement("li")
 
@@ -70,3 +71,6 @@ for (let i = 0; i < 5; i++) {
 
 
 }
+
+
+
