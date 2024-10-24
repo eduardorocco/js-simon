@@ -4,6 +4,10 @@ const countDown = document.getElementById('countdown')
 
 //console.log(countDown)
 
+const instructions = document.getElementById('instructions')
+
+const answersForm = document.getElementById('answers-form')
+
 let count = 10
 
 const timer = setInterval(() => {
@@ -17,19 +21,28 @@ const timer = setInterval(() => {
 
         clearInterval(timer)
 
+        numberList.classList.add("d-none")
+
+        
     }
 
     if (count === -1) {
 
-        countDown.innerHTML = 'Tempo scaduto!'
+        countDown.classList.add("d-none")
 
+        instructions.innerHTML = "Indovina i numeri corretti:"
 
-        //DISPLAY NONE DOPO 10000ms
-
-        numberList.classList.add("d-none")
+        answersForm.classList.toggle("d-none")
+  
     }
 
 }, 1000);
+
+
+
+
+
+
 
 
 
